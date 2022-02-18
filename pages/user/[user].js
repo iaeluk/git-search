@@ -42,7 +42,7 @@ function User({ data, userRepos }) {
           </div>
 
           <span className="font-bold text-xl text-left w-[90%] md:w-[80%] mb-3">
-            Repositórios:
+            Repositórios: {userRepos.length}
           </span>
           <div className="flex items-center justify-center gap-3 flex-wrap w-[90%] pb-10">
             {userRepos.map((repo) => {
