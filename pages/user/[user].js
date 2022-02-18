@@ -86,7 +86,7 @@ export async function getServerSideProps({ params }) {
   const user = await fetch(`https://api.github.com/users/${params.user}`);
   const data = await user.json();
 
-  const repos = await fetch(data.repos_url);
+  const repos = await fetch(`${data.repos_url}?per_page=500`);
   const userRepos = await repos.json();
 
   return {
